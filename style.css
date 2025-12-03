@@ -1,116 +1,39 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Vazirmatn',sans-serif; }
+body { background: linear-gradient(135deg,#ffecb3,#ffe0b2); color:#333; text-align:center; padding:10px;}
+header { margin-bottom:15px; }
+.logo { width:80px; height:80px; border-radius:50%; margin-bottom:10px; border:2px solid #d84315; }
+h1 { font-size:2em; color:#d84315; }
+.intro p { font-size:1.1em; margin-bottom:20px; }
+.menu h2 { margin:15px 0; color:#bf360c; }
+
+.accordion-btn {
+  background:#ffb74d;
+  color:#fff;
+  cursor:pointer;
+  padding:10px 20px;
+  width:100%;
+  border:none;
+  outline:none;
+  text-align:left;
+  font-size:1em;
+  transition:0.3s;
+  border-radius:8px;
+  margin-bottom:5px;
 }
 
-body {
-    background: #fff8e1;
-    color: #333;
-    text-align: center;
-    padding: 10px;
-}
+.accordion-btn:hover { background:#fb8c00; }
 
-header {
-    margin-bottom: 15px;
-}
+.panel { display:none; background:#fff3e0; padding:10px; margin-bottom:10px; border-radius:8px; }
 
-.logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
+.food-grid { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
 
-h1 {
-    font-size: 2em;
-    color: #d84315;
-}
+.food-card { width:120px; background:#fff; border-radius:12px; overflow:hidden; transition:0.3s; }
+.food-card img { width:100%; height:100px; object-fit:cover; }
+.food-card p { padding:5px 0; font-weight:bold; font-size:0.9em; }
+.food-card:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.3); }
 
-.intro p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
+.contact img { width:150px; height:150px; margin-top:10px; }
 
-.categories h2, .contact h2 {
-    margin: 15px 0;
-    color: #bf360c;
-}
+footer { margin-top:30px; font-size:0.9em; color:#6d4c41; }
 
-/* اسلایدر کارت‌ها */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 10px;
-    scroll-behavior: smooth;
-}
-
-.slider::-webkit-scrollbar {
-    height: 8px;
-}
-
-.slider::-webkit-scrollbar-thumb {
-    background: #d84315;
-    border-radius: 4px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    min-width: 120px;
-    flex: 0 0 auto;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-}
-
-.card p {
-    padding: 5px 0;
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.contact button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background-color: #d84315;
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact button:hover {
-    background-color: #bf360c;
-}
-
-.qr-section {
-    display: none;
-    margin-top: 10px;
-}
-
-.qr-section img {
-    width: 150px;
-    height: 150px;
-    margin-top: 5px;
-}
-
-footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #6d4c41;
-}
+@media(max-width:600px){ .food-card{ width:45%; } }
