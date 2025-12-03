@@ -1,47 +1,96 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رستوران ما</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رستوران ما</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="لوگو رستوران" class="logo">
-        <h1>رستوران ما</h1>
-    </header>
 
-    <section class="intro">
-        <p>به رستوران ما خوش آمدید! بهترین غذاها و نوشیدنی‌ها را تجربه کنید.</p>
-    </section>
+<header>
+  <img src="logo.png" alt="لوگو رستوران" class="logo">
+  <h1>رستوران ما</h1>
+</header>
 
-    <section class="categories">
-        <h2>دسته‌بندی‌ها</h2>
-        <div class="slider" id="categorySlider">
-            <!-- ۳۰ کارت با تصاویر آنلاین -->
-            <div class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="ایرانی"><p>ایرانی</p></div>
-            <div class="card"><img src="https://images.unsplash.com/photo-1606756791260-41eb9a83a3aa?auto=format&fit=crop&w=400&q=80" alt="فست فود"><p>فست فود</p></div>
-            <div class="card"><img src="https://images.unsplash.com/photo-1604908177520-6015aa7e14e5?auto=format&fit=crop&w=400&q=80" alt="دریایی"><p>دریایی</p></div>
-            <div class="card"><img src="https://images.unsplash.com/photo-1585238342028-0e8f432c9fdc?auto=format&fit=crop&w=400&q=80" alt="قلیون"><p>قلیون</p></div>
-            <div class="card"><img src="https://images.unsplash.com/photo-1562003385-077b6a5f67b2?auto=format&fit=crop&w=400&q=80" alt="چای و دسر"><p>چای و دسر</p></div>
-            <!-- ادامه تا ۳۰ دسته‌بندی با تصاویر آنلاین واقعی -->
+<section class="intro">
+  <p>به رستوران ما خوش آمدید! دسته‌بندی‌های متنوع غذاها را ببینید و سفارش دهید.</p>
+</section>
+
+<section class="menu">
+  <h2>منوی دسته‌بندی‌ها</h2>
+
+  <div class="accordion">
+    <button class="accordion-btn">ایرانی</button>
+    <div class="panel">
+      <div class="food-grid">
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="کباب">
+          <p>کباب</p>
         </div>
-    </section>
-
-    <section class="contact">
-        <h2>سفارش آنلاین</h2>
-        <button id="toggleQR">دیدن QR کد</button>
-        <div class="qr-section" id="qrSection">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
-            <p>اسکن کنید و با ما آنلاین باشید!</p>
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1606756791260-41eb9a83a3aa?auto=format&fit=crop&w=400&q=80" alt="خورشت">
+          <p>خورشت</p>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer>
-        <p>© 2025 رستوران ما. همه حقوق محفوظ است.</p>
-    </footer>
+    <button class="accordion-btn">فست فود</button>
+    <div class="panel">
+      <div class="food-grid">
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1604908177520-6015aa7e14e5?auto=format&fit=crop&w=400&q=80" alt="برگر">
+          <p>برگر</p>
+        </div>
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=400&q=80" alt="پیتزا">
+          <p>پیتزا</p>
+        </div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <button class="accordion-btn">دریایی</button>
+    <div class="panel">
+      <div class="food-grid">
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb21?auto=format&fit=crop&w=400&q=80" alt="ماهی">
+          <p>ماهی</p>
+        </div>
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1601933475841-cf8e90cda8a0?auto=format&fit=crop&w=400&q=80" alt="میگو">
+          <p>میگو</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="accordion-btn">قلیون و نوشیدنی</button>
+    <div class="panel">
+      <div class="food-grid">
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1585238342028-0e8f432c9fdc?auto=format&fit=crop&w=400&q=80" alt="قلیون">
+          <p>قلیون</p>
+        </div>
+        <div class="food-card">
+          <img src="https://images.unsplash.com/photo-1562003385-077b6a5f67b2?auto=format&fit=crop&w=400&q=80" alt="چای">
+          <p>چای</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ادامه سایر دسته‌ها تا ۳۰ دسته -->
+  </div>
+</section>
+
+<section class="contact">
+  <h2>سفارش آنلاین</h2>
+  <p>برای سفارش آنلاین QR کد را اسکن کنید:</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
+</section>
+
+<footer>
+  <p>© 2025 رستوران ما. همه حقوق محفوظ است.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
