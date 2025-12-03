@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کارت من</title>
+    <title>رستوران ما</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="لوگو" class="logo">
-        <h1>سلام! من مهدی هستم</h1>
+        <img src="logo.png" alt="لوگو رستوران" class="logo">
+        <h1>رستوران ما</h1>
     </header>
 
     <section class="intro">
-        <p>خوش آمدید! اینجا می‌توانید لینک آنلاین من را ببینید.</p>
-        <button id="showQR">دیدن QR کد</button>
+        <p>به رستوران ما خوش آمدید! بهترین غذاها و نوشیدنی‌ها را تجربه کنید.</p>
     </section>
 
-    <section class="qr-section" id="qrSection">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
-        <p>اسکن کنید و با من آنلاین باشید!</p>
-    </section>
-
-    <section class="gallery">
-        <h2>نمونه تصاویر</h2>
-        <div class="images">
-            <img src="https://picsum.photos/200/300?random=1" alt="تصویر 1">
-            <img src="https://picsum.photos/200/300?random=2" alt="تصویر 2">
-            <img src="https://picsum.photos/200/300?random=3" alt="تصویر 3">
+    <section class="categories">
+        <h2>دسته‌بندی‌ها</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="ایرانی">
+                <p>ایرانی</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1606756791260-41eb9a83a3aa?auto=format&fit=crop&w=400&q=80" alt="فست فود">
+                <p>فست فود</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1604908177520-6015aa7e14e5?auto=format&fit=crop&w=400&q=80" alt="دریایی">
+                <p>دریایی</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585238342028-0e8f432c9fdc?auto=format&fit=crop&w=400&q=80" alt="قلیون">
+                <p>قلیون</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1562003385-077b6a5f67b2?auto=format&fit=crop&w=400&q=80" alt="چای و دسر">
+                <p>چای و دسر</p>
+            </div>
+            <!-- ادامه دسته‌ها تا ۳۰ دسته -->
+            <!-- می‌توان عکس‌های دیگر از Unsplash یا Pixabay استفاده کرد -->
         </div>
     </section>
 
+    <section class="contact">
+        <h2>تماس با ما</h2>
+        <p>برای سفارش آنلاین QR کد را اسکن کنید:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
+    </section>
+
     <footer>
-        <p>© 2025 مهدی. همه حقوق محفوظ است.</p>
+        <p>© 2025 رستوران ما. همه حقوق محفوظ است.</p>
     </footer>
 
     <script src="script.js"></script>
