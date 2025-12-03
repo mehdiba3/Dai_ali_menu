@@ -18,36 +18,24 @@
 
     <section class="categories">
         <h2>دسته‌بندی‌ها</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="ایرانی">
-                <p>ایرانی</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1606756791260-41eb9a83a3aa?auto=format&fit=crop&w=400&q=80" alt="فست فود">
-                <p>فست فود</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1604908177520-6015aa7e14e5?auto=format&fit=crop&w=400&q=80" alt="دریایی">
-                <p>دریایی</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1585238342028-0e8f432c9fdc?auto=format&fit=crop&w=400&q=80" alt="قلیون">
-                <p>قلیون</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1562003385-077b6a5f67b2?auto=format&fit=crop&w=400&q=80" alt="چای و دسر">
-                <p>چای و دسر</p>
-            </div>
-            <!-- ادامه دسته‌ها تا ۳۰ دسته -->
-            <!-- می‌توان عکس‌های دیگر از Unsplash یا Pixabay استفاده کرد -->
+        <div class="slider" id="categorySlider">
+            <!-- ۳۰ کارت با تصاویر آنلاین -->
+            <div class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="ایرانی"><p>ایرانی</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1606756791260-41eb9a83a3aa?auto=format&fit=crop&w=400&q=80" alt="فست فود"><p>فست فود</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1604908177520-6015aa7e14e5?auto=format&fit=crop&w=400&q=80" alt="دریایی"><p>دریایی</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1585238342028-0e8f432c9fdc?auto=format&fit=crop&w=400&q=80" alt="قلیون"><p>قلیون</p></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1562003385-077b6a5f67b2?auto=format&fit=crop&w=400&q=80" alt="چای و دسر"><p>چای و دسر</p></div>
+            <!-- ادامه تا ۳۰ دسته‌بندی با تصاویر آنلاین واقعی -->
         </div>
     </section>
 
     <section class="contact">
-        <h2>تماس با ما</h2>
-        <p>برای سفارش آنلاین QR کد را اسکن کنید:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
+        <h2>سفارش آنلاین</h2>
+        <button id="toggleQR">دیدن QR کد</button>
+        <div class="qr-section" id="qrSection">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com" alt="QR کد">
+            <p>اسکن کنید و با ما آنلاین باشید!</p>
+        </div>
     </section>
 
     <footer>
