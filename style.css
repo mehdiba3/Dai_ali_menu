@@ -1,0 +1,99 @@
+/* ریست ساده */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+h1 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #fff;
+    color: #66a6ff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #66a6ff;
+    color: #fff;
+}
+
+.qr-section {
+    display: none;
+    margin: 20px 0;
+}
+
+.qr-section img {
+    width: 200px;
+    height: 200px;
+}
+
+.gallery {
+    margin-top: 30px;
+}
+
+.gallery h2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+}
+
+footer {
+    margin-top: 40px;
+    color: #fff;
+    font-size: 0.9em;
+}
