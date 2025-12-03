@@ -1,8 +1,16 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Vazirmatn',sans-serif; }
 body { background:#121212; color:#eee; text-align:center; padding:10px;}
 header { margin-bottom:15px; }
-.logo { width:90px; height:90px; border-radius:50%; margin-bottom:10px; border:3px solid #ff9800; animation: rotateLogo 5s linear infinite; }
-@keyframes rotateLogo { 0%{transform:rotate(0deg);}100%{transform:rotate(360deg);} }
+
+.logo {
+  width:90px; height:90px; border-radius:50%; margin-bottom:10px;
+  border:3px solid #ff9800;
+  box-shadow: 0 0 15px 5px rgba(255, 193, 7, 0.8), 0 0 30px 10px rgba(255, 152, 0, 0.5);
+  transition:0.5s;
+}
+.logo:hover {
+  box-shadow:0 0 25px 10px rgba(255, 193, 7, 1), 0 0 50px 15px rgba(255, 152, 0, 0.8);
+}
 
 .restaurant-name {
   font-size:2.8em; font-weight:bold;
@@ -17,19 +25,9 @@ header { margin-bottom:15px; }
 
 .menu h2, .contact h2 { margin:20px 0 10px; color:#ff9800; }
 .accordion-btn {
-  background:#1e1e1e;
-  color:#ff9800;
-  cursor:pointer;
-  padding:12px 20px;
-  width:100%;
-  border:none;
-  outline:none;
-  text-align:right;
-  font-size:1.05em;
-  transition:0.3s;
-  border-radius:8px;
-  margin-bottom:8px;
-  direction: rtl;
+  background:#1e1e1e; color:#ff9800; cursor:pointer; padding:12px 20px; width:100%;
+  border:none; outline:none; text-align:right; font-size:1.05em; transition:0.3s;
+  border-radius:8px; margin-bottom:8px; direction: rtl;
 }
 .accordion-btn:hover, .accordion-btn.active { background:#333; }
 
