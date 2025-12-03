@@ -1,132 +1,227 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>منوی رستوران دایی علی</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>منوی دایی علی</title>
+<link rel="preconnect" href="https://images.unsplash.com">
 <style>
 :root{
---bg:#0f1724;
---card:#0b1220;
---accent:#ff7a59;
---accent-2:#ffd166;
---muted:#98a1b3;
---glass: rgba(255,255,255,0.08);
+  --bg1:#071224; --bg2:#0b1f2b;
+  --card:#071424; --glass:rgba(255,255,255,0.04);
+  --accent:#ff7a59; --accent2:#ffd166; --muted:#a8b3bd;
 }
-*{box-sizing:border-box;}
-body{margin:0;font-family:"Vazirmatn","Tahoma",sans-serif;background:linear-gradient(180deg,#08121f 0%, #0f2033 100%);color:#eef2f7;padding:24px;min-height:100vh;display:flex;align-items:center;justify-content:center;}
-.wrap{width:100%;max-width:1200px;margin:auto;}
-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.logo{width:80px;height:80px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#102025;font-weight:800;font-size:22px;box-shadow:0 8px 26px rgba(255,122,89,0.4);transform:rotate(-6deg);transition:transform 0.3s;}
-.logo:hover{transform:rotate(0deg) scale(1.05);}
-.controls{display:flex;gap:10px;}
-.btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:#fff;cursor:pointer;font-weight:600;transition:all 0.3s;}
-.btn:hover{transform:scale(1.05);background:rgba(255,255,255,0.05);}
-.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0;color:#102025;}
-.tabs{display:flex;gap:10px;margin-bottom:20px;}
-.tab{padding:10px 20px;border-radius:12px;cursor:pointer;background:rgba(255,255,255,0.05);transition:all 0.3s;}
-.tab.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#102025;}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
-.card{background:var(--card);padding:14px;border-radius:16px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.06);transition:.35s;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.3);}
-.card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 20px 50px rgba(0,0,0,0.6);}
-.thumb{width:100%;height:170px;border-radius:12px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,0.05);transition:transform 0.5s;}
-.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.card:hover .thumb img{transform:scale(1.15) rotate(-1deg);}
-.badge{background:var(--glass);padding:6px 10px;font-size:12px;border-radius:999px;color:var(--muted);}
-.price{color:var(--accent-2);font-weight:900;font-size:18px;}
-.hero{background:rgba(255,255,255,0.05);padding:20px;border-radius:16px;display:flex;gap:20px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.06);}
-.hero img{width:260px;height:150px;border-radius:14px;object-fit:cover;}
-.random-card{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#102025;padding:14px;border-radius:14px;min-width:220px;box-shadow:0 12px 32px rgba(255,122,89,0.3);}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,0.65);display:none;align-items:center;justify-content:center;z-index:99;}
-.modal.open{display:flex;}
-.panel{background:#0b1528;padding:22px;border-radius:16px;width:92%;max-width:600px;color:#fff;border:1px solid rgba(255,255,255,0.06);}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:"Vazirmatn","Tahoma",sans-serif;background:
+  radial-gradient(800px 300px at 10% 10%, rgba(255,122,89,0.06), transparent),
+  linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:#eef6f4;padding:20px;display:flex;align-items:flex-start;justify-content:center;
+}
+.container{width:100%;max-width:1150px}
+.header{
+  display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px;
+}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{
+  width:84px;height:84px;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(2,8,20,0.6);
+  border:4px solid rgba(255,255,255,0.03);background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+}
+.logo img{width:100%;height:100%;object-fit:cover;display:block}
+.title h1{margin:0;font-size:20px}
+.title p{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+/* controls */
+.controls{display:flex;gap:10px;align-items:center}
+.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;cursor:pointer;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#08121a;border:0;box-shadow:0 8px 30px rgba(255,122,89,0.14)}
+.search{
+  margin-left:12px;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:#fff
+}
+
+/* hero */
+.hero{
+  display:flex;gap:18px;align-items:center;padding:16px;border-radius:14px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);
+  border:1px solid rgba(255,255,255,0.03);margin-bottom:18px;backdrop-filter:blur(4px);
+}
+.hero-left h2{margin:0 0 6px 0}
+.hero-left p{margin:0;color:var(--muted)}
+.hero-right{width:320px;height:150px;border-radius:12px;overflow:hidden;position:relative}
+.hero-right img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.9,.2,1)}
+.hero-right:hover img{transform:scale(1.06)}
+
+/* tabs */
+.tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:10px 18px;border-radius:12px;background:rgba(255,255,255,0.02);cursor:pointer;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+.tab.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081218;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.006));
+  border-radius:14px;padding:12px;border:1px solid rgba(255,255,255,0.03);overflow:hidden;cursor:pointer;
+  transition:transform .35s,box-shadow .35s;
+}
+.card:hover{transform:translateY(-10px);box-shadow:0 30px 70px rgba(2,6,23,0.6)}
+.thumb{width:100%;height:170px;border-radius:12px;overflow:hidden;background:#081018;border:1px solid rgba(255,255,255,0.02);position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .thumb img{transform:scale(1.12)}
+.info{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.titleFood{font-weight:800}
+.desc{color:var(--muted);font-size:13px;margin-top:6px}
+.price{color:var(--accent2);font-weight:900}
+
+/* badge */
+.badge{position:absolute;left:12px;top:12px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081218;padding:8px 12px;border-radius:10px;font-weight:800;transform:rotate(-6deg);box-shadow:0 12px 30px rgba(255,122,89,0.18)}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;z-index:99}
+.modal.open{display:flex}
+.panel{width:95%;max-width:720px;background:#071826;border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.04)}
+.panel .top{display:flex;gap:12px;align-items:center}
+.panel img{width:260px;height:160px;object-fit:cover;border-radius:8px}
+.panel h3{margin:0}
+.closeBtn{margin-left:auto;padding:8px 12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff;cursor:pointer}
+
+/* small */
+@media (max-width:720px){.hero{flex-direction:column}.hero-right{width:100%} .panel img{width:100%;height:200px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-<div class="brand">
-<div class="logo">دایی<br>علی</div>
-<div>
-<h1>منوی رستوران دایی علی</h1>
-<div class="subtitle">فست‌فود | ایرانی | قلیان</div>
+<div class="container">
+  <header class="header">
+    <div class="brand">
+      <div class="logo"><img src="logo.png" alt="دایی علی"></div>
+      <div class="title">
+        <h1>رستوران دایی علی</h1>
+        <p>فست‌فود · غذای ایرانی · تجربهٔ خانگی</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input class="search" id="q" placeholder="جستجوی غذا..." />
+      <button class="btn" onclick="shuffleMenu()">تازه‌سازی</button>
+      <button class="btn primary" id="randBtn">پیشنهاد امروز</button>
+    </div>
+  </header>
+
+  <section class="hero" aria-hidden="false">
+    <div class="hero-left">
+      <h2>خوش آمدی! انتخاب امروز رو امتحان کن</h2>
+      <p>برای دیدن جزئیات روی کارت هر غذا کلیک کن. می‌تونی از تب‌ها هم دسته‌بندی رو فیلتر کنی.</p>
+    </div>
+    <div class="hero-right">
+      <img id="heroImg" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="hero food">
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <div class="tab active" data-type="همه">همه</div>
+    <div class="tab" data-type="فست‌فود">فست‌فود</div>
+    <div class="tab" data-type="ایرانی">ایرانی</div>
+    <div class="tab" data-type="نوشیدنی">نوشیدنی</div>
+  </div>
+
+  <main class="grid" id="grid"></main>
 </div>
-</div>
-<div class="controls">
-<button class="btn" onclick="shuffleMenu()">تازه‌سازی</button>
-<button class="btn primary" id="randomBtn">پیشنهاد امروز</button>
-</div>
-</header>
-<section class="hero">
-<div style="flex:1">
-<h2>پیشنهاد ویژه امروز</h2>
-<p>یک غذای خوشمزه یا قلیان ویژه!</p>
-</div>
-<img src="https://picsum.photos/800/150" />
-</section>
-<div class="tabs">
-<div class="tab active" data-type="همه">همه</div>
-<div class="tab" data-type="فست‌فود">فست‌فود</div>
-<div class="tab" data-type="ایرانی">ایرانی</div>
-<div class="tab" data-type="قلیان">قلیان</div>
-</div>
-<div style="display:flex;gap:16px;margin-bottom:20px">
-<div class="random-card" id="randomCard">
-<h3 id="rnd-name">—</h3>
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div class="price" id="rnd-price">—</div>
-<div class="badge" id="rnd-type">—</div>
-</div>
-</div>
-</div>
-<main class="menu-grid" id="menuGrid"></main>
-</div>
-<div class="modal" id="modal">
-<div class="panel">
-<h3 id="modal-title"></h3>
-<img id="modal-img" style="width:160px;height:120px;border-radius:10px;object-fit:cover;margin:10px 0">
-<p id="modal-desc"></p>
-<div class="price" id="modal-price"></div>
-<button class="btn" onclick="closeModal()">بستن</button>
-</div>
-</div>
+
+<div class="modal" id="modal"><div class="panel" role="dialog" aria-modal="true">
+  <div class="top">
+    <img id="modalImg" src="" alt="">
+    <div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc" style="color:var(--muted)"></p>
+      <div style="margin-top:8px;color:var(--accent2);font-weight:800" id="modalPrice"></div>
+    </div>
+    <button class="closeBtn" onclick="closeModal()">بستن</button>
+  </div>
+</div></div>
+
 <script>
-const menu=[
-{name:'برگر آتشین',desc:'برگر با پنیر، سس اسپایسی و خیارشور.',price:'۱۸۵,۰۰۰ تومان',img:'https://picsum.photos/seed/burger1/400/300',type:'فست‌فود'},
-{name:'پیتزا پپرونی',desc:'پپرونی و پنیر فراوان، خمیر ایتالیایی.',price:'۱۹۵,۰۰۰ تومان',img:'https://picsum.photos/seed/pizza1/400/300',type:'فست‌فود'},
-{name:'چیزبرگر دوبل',desc:'همبرگر دو طبقه با پنیر چدار.',price:'۲۱۰,۰۰۰ تومان',img:'https://picsum.photos/seed/cheeseburger1/400/300',type:'فست‌فود'},
-{name:'چلوکباب کوبیده',desc:'دو سیخ کوبیده با برنج زعفرانی.',price:'۳۲۰,۰۰۰ تومان',img:'https://picsum.photos/seed/kebab1/400/300',type:'ایرانی'},
-{name:'جوجه کباب زعفرانی',desc:'مرغ تازه مزه‌دار، پخت زغالی.',price:'۲۹۰,۰۰۰ تومان',img:'https://picsum.photos/seed/chicken1/400/300',type:'ایرانی'},
-{name:'خورشت قورمه‌سبزی',desc:'سبزی تازه، گوشت و لوبیا.',price:'۲۴۵,۰۰۰ تومان',img:'https://picsum.photos/seed/ghorme1/400/300',type:'ایرانی'},
-{name:'قلیان سنتی',desc:'قلیان عربی با تنباکوی مخصوص.',price:'۱۲۰,۰۰۰ تومان',img:'https://picsum.photos/seed/hookah1/400/300',type:'قلیان'},
-{name:'قلیان میوه‌ای',desc:'طعم میوه‌ای تازه و خنک.',price:'۱۴۰,۰۰۰ تومان',img:'https://picsum.photos/seed/hookah2/400/300',type:'قلیان'},
-{name:'قلیان اسپشیال',desc:'طعم اختصاصی دایی علی با سس‌های مخصوص.',price:'۱۶۰,۰۰۰ تومان',img:'https://picsum.photos/seed/hookah3/400/300',type:'قلیان'}
+/*
+  منو با تصاویر واقعی از Unsplash.
+  اگر می‌خوای عکس‌های خودت باشن: فایل‌ها رو آپلود کن و srcها رو به paths محلی تغییر بده (مثلا "images/burger.jpg").
+*/
+
+const menu = [
+  {name:"برگر مخصوص دایی", desc:"گوشت تازه، پنیر چدار، سس دست‌ساز", price:"۱۸۵٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1606755962771-5f3c7d6e6a4c?auto=format&fit=crop&w=1200&q=80", type:"فست‌فود", tag:"پرفروش"},
+  {name:"پیتزا پپرونی ایتالیایی", desc:"پپرونی اصل، پنیر موزارلا کش‌دار", price:"۱۹۵٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1601924582971-df3b0f4b5a6b?auto=format&fit=crop&w=1200&q=80", type:"فست‌فود"},
+  {name:"سیب‌زمینی ویژه", desc:"سیب‌زمینی باریک و نرم با ادویهٔ مخصوص", price:"۷۵٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1544025162-8a2a6b6f2a0f?auto=format&fit=crop&w=1200&q=80", type:"فست‌فود"},
+  {name:"چلوکباب کوبیده", desc:"دو سیخ کوبیده با برنج زعفرانی و کره", price:"۳۲۰٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=1200&q=80", type:"ایرانی"},
+  {name:"جوجه زعفرانی", desc:"مرغ مزه‌دار با زعفران و گریل زیبا", price:"۲۹۰٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1514516870922-6b7a6f7d7c3d?auto=format&fit=crop&w=1200&q=80", type:"ایرانی"},
+  {name:"قورمه‌سبزی خانگی", desc:"طعم خانگی و پرگوشت", price:"۲۴۵٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1604908177522-3d9d3f0a3f8f?auto=format&fit=crop&w=1200&q=80", type:"ایرانی"},
+  {name:"نوشابه سرد", desc:"انواع نوشابه‌های گازدار", price:"۲۰٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1562774056-6a0a2d1c1f1c?auto=format&fit=crop&w=800&q=80", type:"نوشیدنی"},
+  {name:"شیک شکلاتی", desc:"میلک‌شیک با سس شکلاتی و خامه", price:"۱۱۰٬۰۰۰ تومان", img:"https://images.unsplash.com/photo-1542444459-db2a6d4b3f1a?auto=format&fit=crop&w=800&q=80", type:"نوشیدنی"}
 ];
-const menuGrid=document.getElementById('menuGrid');
-const tabs=document.querySelectorAll('.tab');
-function displayMenu(type='همه'){
-menuGrid.innerHTML='';
-menu.filter(item=>type==='همه'||item.type===type).forEach(item=>{
-const card=document.createElement('div');
-card.className='card';
-card.innerHTML=`<div class='thumb'><img src='${item.img}'/></div><h3>${item.name}</h3><p>${item.desc}</p><div style='display:flex;justify-content:space-between;align-items:center'><div class='price'>${item.price}</div><div class='badge'>${item.type}</div></div>`;
-card.onclick=()=>openModal(item);
-menuGrid.appendChild(card);
-});
+
+const grid = document.getElementById('grid');
+const tabs = document.querySelectorAll('.tab');
+const heroImg = document.getElementById('heroImg');
+
+// render
+function render(type="همه", query=""){
+  grid.innerHTML = "";
+  const list = menu.filter(it => (type==="همه"||it.type===type) && (it.name.includes(query) || it.desc.includes(query)));
+  list.forEach(it=>{
+    const el = document.createElement('article');
+    el.className = "card";
+    el.innerHTML = `
+      ${it.tag?`<div class="badge">${it.tag}</div>`:""}
+      <div class="thumb"><img loading="lazy" src="${it.img}" alt="${it.name}"></div>
+      <div class="info">
+        <div>
+          <div class="titleFood">${it.name}</div>
+          <div class="desc">${it.desc}</div>
+        </div>
+        <div style="text-align:left">
+          <div class="price">${it.price}</div>
+          <div class="badge" style="position:static;margin-top:8px;background:transparent;color:var(--muted);border-radius:8px;padding:6px 8px">${it.type}</div>
+        </div>
+      </div>
+    `;
+    el.addEventListener('click',()=> openModal(it));
+    grid.appendChild(el);
+  });
+  if(list.length===0) grid.innerHTML = `<div style="padding:24px;color:var(--muted)">موردی یافت نشد.</div>`;
 }
-function shuffleMenu(){menu.sort(()=>Math.random()-0.5);displayMenu();}
-function openModal(item){document.getElementById('modal').classList.add('open');document.getElementById('modal-title').innerText=item.name;document.getElementById('modal-desc').innerText=item.desc;document.getElementById('modal-price').innerText=item.price;document.getElementById('modal-img').src=item.img;}
-function closeModal(){document.getElementById('modal').classList.remove('open');}
-document.getElementById('randomBtn').onclick=()=>{
-const rnd=menu[Math.floor(Math.random()*menu.length)];
-document.getElementById('rnd-name').innerText=rnd.name;
-document.getElementById('rnd-price').innerText=rnd.price;
-document.getElementById('rnd-type').innerText=rnd.type;
-openModal(rnd);
-};
-tabs.forEach(tab=>{tab.onclick=()=>{tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');displayMenu(tab.getAttribute('data-type'));};});
-displayMenu();
+
+// modal
+function openModal(item){
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('modalImg').src = item.img;
+  document.getElementById('modalTitle').innerText = item.name;
+  document.getElementById('modalDesc').innerText = item.desc;
+  document.getElementById('modalPrice').innerText = item.price;
+}
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+
+// tabs
+tabs.forEach(t=>{
+  t.addEventListener('click', ()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    render(t.getAttribute('data-type'), document.getElementById('q').value || "");
+  });
+});
+
+// search & random
+document.getElementById('q').addEventListener('input', (e)=>{ const active = document.querySelector('.tab.active').getAttribute('data-type'); render(active, e.target.value); });
+
+function shuffleMenu(){
+  menu.sort(()=>Math.random()-0.5);
+  const active = document.querySelector('.tab.active').getAttribute('data-type');
+  render(active, document.getElementById('q').value || "");
+  heroImg.src = menu[0].img;
+}
+document.getElementById('randBtn').addEventListener('click', ()=>{
+  const r = menu[Math.floor(Math.random()*menu.length)];
+  openModal(r);
+});
+
+// initial
+render();
 </script>
 </body>
 </html>
